@@ -1,0 +1,40 @@
+# fw_max_controllers.yaml
+
+controller_manager:
+  ros__parameters:
+    update_rate: 50 # Hz
+
+    joint_state_broadcaster:
+      type: joint_state_broadcaster/JointStateBroadcaster
+
+    # Controller for driving (Velocity Control)
+    wheel_velocity_controller:
+      type: velocity_controllers/JointGroupVelocityController
+
+    # Controller for steering (Position Control)
+    steering_position_controller:
+      type: position_controllers/JointGroupPositionController
+
+joint_state_broadcaster:
+  ros__parameters:
+    # This section is necessary for the controller manager to fully load the controller.
+    # No custom parameters are usually needed here, as it broadcasts all state interfaces.
+    # The list of joints is automatically determined from the 'ros2_control' block in the URDF.
+    {} 
+
+wheel_velocity_controller:
+  ros__parameters:
+    joints:
+      - left_front_wheel_joint
+      - right_front_wheel_joint
+      - left_rear_wheel_joint
+      - right_rear_wheel_joint
+
+
+steering_position_controller:
+  ros__parameters:
+    joints:
+      - left_steering_hinge_joint
+      - right_steering_hinge_joint    # ADD THIS
+      - rear_left_steering_hinge_joint   # ADD THIS
+      - rear_right_steering_hinge_joint  # ADD THIS

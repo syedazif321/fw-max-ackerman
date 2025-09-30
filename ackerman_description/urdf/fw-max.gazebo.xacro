@@ -1,0 +1,75 @@
+<?xml version="1.0"?>
+<robot name="fw_max" xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+    <xacro:macro name="wheel_transmission" params="joint_name interface_type">
+        <transmission name="${joint_name}_transmission">
+            <type>transmission_interface/SimpleTransmission</type>
+            <joint name="${joint_name}">
+                <hardwareInterface>${interface_type}</hardwareInterface>
+            </joint>
+            <actuator name="${joint_name}_actuator">
+                <hardwareInterface>${interface_type}</hardwareInterface>
+                <mechanicalReduction>1</mechanicalReduction>
+            </actuator>
+        </transmission>
+    </xacro:macro>
+
+    <xacro:wheel_transmission joint_name="left_rear_wheel_joint" interface_type="velocity" />
+    <xacro:wheel_transmission joint_name="right_rear_wheel_joint" interface_type="velocity" />
+    <xacro:wheel_transmission joint_name="left_front_wheel_joint" interface_type="velocity" />
+    <xacro:wheel_transmission joint_name="right_front_wheel_joint" interface_type="velocity" />
+    
+    <xacro:macro name="hinge_transmission" params="joint_name interface_type">
+        <transmission name="${joint_name}_transmission">
+            <type>transmission_interface/SimpleTransmission</type>
+            <joint name="${joint_name}">
+                <hardwareInterface>${interface_type}</hardwareInterface>
+            </joint>
+            <actuator name="${joint_name}_actuator">
+                <hardwareInterface>${interface_type}</hardwareInterface>
+                <mechanicalReduction>1</mechanicalReduction>
+            </actuator>
+        </transmission>
+    </xacro:macro>
+
+    <xacro:hinge_transmission joint_name="left_steering_hinge_joint" interface_type="position"/>
+    <xacro:hinge_transmission joint_name="right_steering_hinge_joint" interface_type="position"/>
+    <xacro:hinge_transmission joint_name="rear_left_steering_hinge_joint" interface_type="position"/>
+    <xacro:hinge_transmission joint_name="rear_right_steering_hinge_joint" interface_type="position"/>
+
+   <gazebo reference="base_link">
+      <mu1 value="0.0"/>
+      <mu2 value="0.0"/>
+ 
+      <material>Gazebo/Red</material>
+    </gazebo>
+
+    <gazebo reference="left_rear_wheel">
+      <mu1 value="10.0"/>   <mu2 value="10.0"/>
+
+      <material>Gazebo/Black</material>
+    </gazebo>
+
+    <gazebo reference="right_rear_wheel">
+      <mu1 value="10.0"/>
+      <mu2 value="10.0"/>
+
+      <material>Gazebo/Black</material>
+    </gazebo>
+
+    <gazebo reference="left_front_wheel">
+      <mu1 value="10.0"/>
+      <mu2 value="10.0"/>
+
+      <material>Gazebo/Black</material>
+    </gazebo>
+
+    <gazebo reference="right_front_wheel">
+      <mu1 value="10.0"/>
+      <mu2 value="10.0"/>
+   
+      <material>Gazebo/Black</material>
+    </gazebo>
+
+
+</robot>

@@ -1,0 +1,78 @@
+[0.000000] (-) TimerEvent: {}
+[0.000237] (fw_max_cartographer) JobQueued: {'identifier': 'fw_max_cartographer', 'dependencies': OrderedDict()}
+[0.000317] (fw_max_cartographer) JobStarted: {'identifier': 'fw_max_cartographer'}
+[0.009223] (fw_max_cartographer) JobProgress: {'identifier': 'fw_max_cartographer', 'progress': 'cmake'}
+[0.009767] (fw_max_cartographer) Command: {'cmd': ['/usr/bin/cmake', '/home/azif/projetcs/outdoor_world/src/fw_max_cartographer', '-DAMENT_CMAKE_SYMLINK_INSTALL=1', '-DCMAKE_INSTALL_PREFIX=/home/azif/projetcs/outdoor_world/src/fw_max_cartographer/install/fw_max_cartographer'], 'cwd': '/home/azif/projetcs/outdoor_world/src/fw_max_cartographer/build/fw_max_cartographer', 'env': OrderedDict([('GJS_DEBUG_TOPICS', 'JS ERROR;JS LOG'), ('LESSOPEN', '| /usr/bin/lesspipe %s'), ('LANGUAGE', 'en_IN:en'), ('USER', 'azif'), ('XDG_SESSION_TYPE', 'x11'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib:/usr/share/gazebo-11/../../lib/x86_64-linux-gnu/gazebo-11/plugins:'), ('HOME', '/home/azif'), ('CONDA_SHLVL', '0'), ('OLDPWD', '/home/azif/projetcs/outdoor_world'), ('DESKTOP_SESSION', 'ubuntu'), ('NVM_BIN', '/home/azif/.nvm/versions/node/v24.11.0/bin'), ('NVM_INC', '/home/azif/.nvm/versions/node/v24.11.0/include/node'), ('GIO_LAUNCHED_DESKTOP_FILE', '/usr/share/applications/terminator.desktop'), ('GAZEBO_MASTER_URI', 'http://localhost:11345'), ('ROS_PYTHON_VERSION', '3'), ('GNOME_SHELL_SESSION_MODE', 'ubuntu'), ('GTK_MODULES', 'gail:atk-bridge'), ('MANAGERPID', '2001'), ('SYSTEMD_EXEC_PID', '2287'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('COLORTERM', 'truecolor'), ('_CE_M', ''), ('TERMINATOR_DBUS_NAME', 'net.tenshu.Terminator23558193cd9818af7fe4d2c2f5bd9d00f'), ('GIO_LAUNCHED_DESKTOP_FILE_PID', '5597'), ('NVM_DIR', '/home/azif/.nvm'), ('MANDATORY_PATH', '/usr/share/gconf/ubuntu.mandatory.path'), ('IM_CONFIG_PHASE', '1'), ('ROS_DISTRO', 'humble'), ('GTK_IM_MODULE', 'ibus'), ('LOGNAME', 'azif'), ('JOURNAL_STREAM', '8:10881'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_CLASS', 'user'), ('DEFAULTS_PATH', '/usr/share/gconf/ubuntu.default.path'), ('USERNAME', 'azif'), ('TERM', 'xterm-256color'), ('GAZEBO_MODEL_PATH', '/usr/share/gazebo-11/../../share/gazebo-11/models:'), ('GNOME_DESKTOP_SESSION_ID', 'this-is-deprecated'), ('_CE_CONDA', ''), ('ROS_LOCALHOST_ONLY', '0'), ('WINDOWPATH', '2'), ('OGRE_RESOURCE_PATH', '/usr/lib/x86_64-linux-gnu/OGRE-1.9.0'), ('PATH', '/home/azif/.nvm/versions/node/v24.11.0/bin:/home/azif/miniconda3/condabin:/opt/ros/humble/bin:/home/azif/.local/bin:/home/azif/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin:/opt/xtensa-esp-elf/bin/'), ('SESSION_MANAGER', 'local/azif:@/tmp/.ICE-unix/2260,unix/azif:/tmp/.ICE-unix/2260'), ('INVOCATION_ID', '1b71ac1561dd42dfaab282d936bdf086'), ('XDG_MENU_PREFIX', 'gnome-'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':1'), ('TERMINATOR_DBUS_PATH', '/net/tenshu/Terminator2'), ('LANG', 'en_US.UTF-8'), ('XDG_CURRENT_DESKTOP', 'ubuntu:GNOME'), ('IBUS_DISABLE_SNOOPER', '1'), ('RMW_IMPLEMENTATION', 'rmw_cyclonedds_cpp'), ('XMODIFIERS', '@im=ibus'), ('XDG_SESSION_DESKTOP', 'ubuntu'), ('XAUTHORITY', '/run/user/1000/gdm/Xauthority'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('SSH_AGENT_LAUNCHER', 'gnome-keyring'), ('SSH_AUTH_SOCK', '/run/user/1000/keyring/ssh'), ('ROS_DOMAIN_ID', '22'), ('AMENT_PREFIX_PATH', '/opt/ros/humble'), ('CONDA_PYTHON_EXE', '/home/azif/miniconda3/bin/python'), ('SHELL', '/bin/bash'), ('TERMINATOR_UUID', 'urn:uuid:366649e7-7a3b-44e8-9a2b-b0dbced3b9a2'), ('QT_ACCESSIBILITY', '1'), ('GDMSESSION', 'ubuntu'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('GPG_AGENT_INFO', '/run/user/1000/gnupg/S.gpg-agent:0:1'), ('GAZEBO_RESOURCE_PATH', '/usr/share/gazebo-11/../../share/gazebo-11:'), ('GJS_DEBUG_OUTPUT', 'stderr'), ('GAZEBO_MODEL_DATABASE_URI', 'http://models.gazebosim.org'), ('QT_IM_MODULE', 'ibus'), ('PWD', '/home/azif/projetcs/outdoor_world/src/fw_max_cartographer/build/fw_max_cartographer'), ('LC_ALL', 'en_US.UTF-8'), ('XDG_CONFIG_DIRS', '/etc/xdg/xdg-ubuntu:/etc/xdg'), ('CONDA_EXE', '/home/azif/miniconda3/bin/conda'), ('GAZEBO_PLUGIN_PATH', '/usr/share/gazebo-11/../../lib/x86_64-linux-gnu/gazebo-11/plugins:'), ('NVM_CD_FLAGS', ''), ('XDG_DATA_DIRS', '/usr/share/ubuntu:/usr/share/gnome:/home/azif/.local/share/flatpak/exports/share:/var/lib/flatpak/exports/share:/usr/local/share/:/usr/share/:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('VTE_VERSION', '6800'), ('CMAKE_PREFIX_PATH', '/opt/ros/humble')]), 'shell': False}
+[0.099149] (-) TimerEvent: {}
+[0.116930] (fw_max_cartographer) StdoutLine: {'line': b'-- The C compiler identification is GNU 11.4.0\n'}
+[0.199290] (-) TimerEvent: {}
+[0.209005] (fw_max_cartographer) StdoutLine: {'line': b'-- The CXX compiler identification is GNU 11.4.0\n'}
+[0.220688] (fw_max_cartographer) StdoutLine: {'line': b'-- Detecting C compiler ABI info\n'}
+[0.298922] (fw_max_cartographer) StdoutLine: {'line': b'-- Detecting C compiler ABI info - done\n'}
+[0.299293] (-) TimerEvent: {}
+[0.304426] (fw_max_cartographer) StdoutLine: {'line': b'-- Check for working C compiler: /usr/bin/cc - skipped\n'}
+[0.304731] (fw_max_cartographer) StdoutLine: {'line': b'-- Detecting C compile features\n'}
+[0.305387] (fw_max_cartographer) StdoutLine: {'line': b'-- Detecting C compile features - done\n'}
+[0.308175] (fw_max_cartographer) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info\n'}
+[0.388739] (fw_max_cartographer) StdoutLine: {'line': b'-- Detecting CXX compiler ABI info - done\n'}
+[0.394600] (fw_max_cartographer) StdoutLine: {'line': b'-- Check for working CXX compiler: /usr/bin/c++ - skipped\n'}
+[0.394806] (fw_max_cartographer) StdoutLine: {'line': b'-- Detecting CXX compile features\n'}
+[0.395098] (fw_max_cartographer) StdoutLine: {'line': b'-- Detecting CXX compile features - done\n'}
+[0.399395] (-) TimerEvent: {}
+[0.402126] (fw_max_cartographer) StdoutLine: {'line': b'-- Found ament_cmake: 1.3.12 (/opt/ros/humble/share/ament_cmake/cmake)\n'}
+[0.499507] (-) TimerEvent: {}
+[0.540754] (fw_max_cartographer) StdoutLine: {'line': b'-- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter \n'}
+[0.594733] (fw_max_cartographer) StdoutLine: {'line': b'-- Override CMake install command with custom implementation using symlinks instead of copying resources\n'}
+[0.599614] (-) TimerEvent: {}
+[0.648959] (fw_max_cartographer) StdoutLine: {'line': b'-- Found cartographer_ros: 2.0.9002 (/opt/ros/humble/share/cartographer_ros/cmake)\n'}
+[0.698483] (fw_max_cartographer) StdoutLine: {'line': b'-- Found rosidl_generator_c: 3.1.7 (/opt/ros/humble/share/rosidl_generator_c/cmake)\n'}
+[0.699685] (-) TimerEvent: {}
+[0.705455] (fw_max_cartographer) StdoutLine: {'line': b'-- Found rosidl_adapter: 3.1.7 (/opt/ros/humble/share/rosidl_adapter/cmake)\n'}
+[0.716541] (fw_max_cartographer) StdoutLine: {'line': b'-- Found rosidl_generator_cpp: 3.1.7 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)\n'}
+[0.734890] (fw_max_cartographer) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c\n'}
+[0.753636] (fw_max_cartographer) StdoutLine: {'line': b'-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp\n'}
+[0.799801] (-) TimerEvent: {}
+[0.900081] (-) TimerEvent: {}
+[0.973526] (fw_max_cartographer) StdoutLine: {'line': b'-- Found Boost: /usr/lib/x86_64-linux-gnu/cmake/Boost-1.74.0/BoostConfig.cmake (found version "1.74.0") found components: iostreams \n'}
+[1.000190] (-) TimerEvent: {}
+[1.100535] (-) TimerEvent: {}
+[1.109078] (fw_max_cartographer) StdoutLine: {'line': b'-- Found rmw_implementation_cmake: 6.1.2 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)\n'}
+[1.112930] (fw_max_cartographer) StdoutLine: {'line': b'-- Found rmw_cyclonedds_cpp: 1.3.4 (/opt/ros/humble/share/rmw_cyclonedds_cpp/cmake)\n'}
+[1.138613] (fw_max_cartographer) StdoutLine: {'line': b"-- Using RMW implementation 'rmw_cyclonedds_cpp' as default\n"}
+[1.149426] (fw_max_cartographer) StdoutLine: {'line': b'-- Found Threads: TRUE  \n'}
+[1.200677] (-) TimerEvent: {}
+[1.252370] (fw_max_cartographer) StdoutLine: {'line': b"-- Checking for module 'eigen3'\n"}
+[1.267181] (fw_max_cartographer) StdoutLine: {'line': b'--   Found eigen3, version 3.4.0\n'}
+[1.300791] (-) TimerEvent: {}
+[1.305045] (fw_max_cartographer) StdoutLine: {'line': b'-- Found Eigen: /usr/include/eigen3 (Required is at least version "3.1") \n'}
+[1.305233] (fw_max_cartographer) StdoutLine: {'line': b'-- Eigen found (include: /usr/include/eigen3, version: 3.4.0)\n'}
+[1.343181] (fw_max_cartographer) StdoutLine: {'line': b"-- Checking for module 'flann'\n"}
+[1.359012] (fw_max_cartographer) StdoutLine: {'line': b'--   Found flann, version 1.9.1\n'}
+[1.400898] (-) TimerEvent: {}
+[1.409642] (fw_max_cartographer) StdoutLine: {'line': b'-- Found FLANN: /usr/lib/x86_64-linux-gnu/libflann_cpp.so  \n'}
+[1.409847] (fw_max_cartographer) StdoutLine: {'line': b'-- FLANN found (include: /usr/include, lib: /usr/lib/x86_64-linux-gnu/libflann_cpp.so)\n'}
+[1.501048] (-) TimerEvent: {}
+[1.601349] (-) TimerEvent: {}
+[1.701653] (-) TimerEvent: {}
+[1.801996] (-) TimerEvent: {}
+[1.902352] (-) TimerEvent: {}
+[2.002659] (-) TimerEvent: {}
+[2.102924] (-) TimerEvent: {}
+[2.203242] (-) TimerEvent: {}
+[2.303549] (-) TimerEvent: {}
+[2.403815] (-) TimerEvent: {}
+[2.417998] (fw_max_cartographer) StdoutLine: {'line': b"-- Checking for module 'libusb-1.0'\n"}
+[2.435961] (fw_max_cartographer) StdoutLine: {'line': b'--   Found libusb-1.0, version 1.0.25\n'}
+[2.480178] (fw_max_cartographer) StdoutLine: {'line': b'-- Found libusb: /usr/lib/x86_64-linux-gnu/libusb-1.0.so  \n'}
+[2.480895] (fw_max_cartographer) StdoutLine: {'line': b'-- OpenNI found (version: 1.5.4.0, include: /usr/include/ni, lib: /usr/lib/libOpenNI.so;libusb::libusb)\n'}
+[2.503918] (-) TimerEvent: {}
+[2.553816] (fw_max_cartographer) StdoutLine: {'line': b'-- OpenNI2 found (version: 2.2.0.33, include: /usr/include/openni2, lib: /usr/lib/x86_64-linux-gnu/libOpenNI2.so;libusb::libusb)\n'}
+[2.604051] (-) TimerEvent: {}
+[2.684137] (fw_max_cartographer) StdoutLine: {'line': b'-- Eigen found (include: /usr/include/eigen3, version: 3.4.0)\n'}
+[2.690684] (fw_max_cartographer) StdoutLine: {'line': b'-- OpenNI found (version: 1.5.4.0, include: /usr/include/ni, lib: /usr/lib/libOpenNI.so;libusb::libusb)\n'}
+[2.697809] (fw_max_cartographer) StdoutLine: {'line': b'-- OpenNI2 found (version: 2.2.0.33, include: /usr/include/openni2, lib: /usr/lib/x86_64-linux-gnu/libOpenNI2.so;libusb::libusb)\n'}
+[2.704156] (-) TimerEvent: {}
+[2.794334] (fw_max_cartographer) CommandEnded: {'returncode': -2}
+[2.803382] (fw_max_cartographer) JobEnded: {'identifier': 'fw_max_cartographer', 'rc': 'SIGINT'}
+[2.804212] (-) TimerEvent: {}
+[2.813853] (-) EventReactorShutdown: {}

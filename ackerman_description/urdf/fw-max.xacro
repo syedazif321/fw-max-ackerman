@@ -7,15 +7,15 @@
     </link>
 
     <link name="base_link">
-        <visual>
-            <geometry>
-                <mesh filename="file:///home/azif/projetcs/Ackerman_ws/ackerman_description/meshes/fw-max-chassis.STL" scale="1 1 1"/>
-            </geometry>
-            <origin xyz="0.48 0.275 -0.01" rpy="1.57 0 -1.57" />
-            <material name="white">
-                <color rgba="1 1 1 1" />
-            </material>
-        </visual>
+    <visual>
+        <origin xyz="0 0 0.1" rpy="0 0 0"/>  <!-- Adjust height as needed -->
+        <geometry>
+        <box size="0.6 0.4 0.15"/>         <!-- Length, Width, Height in meters -->
+        </geometry>
+        <material name="Gray">
+        <color rgba="0.5 0.5 0.5 1.0"/>
+        </material>
+    </visual>
 
         <inertial>
         <origin xyz="0 0 0" />
@@ -69,7 +69,7 @@
 
 
     <link name="left_front_wheel">
-        <visual><geometry><mesh filename="file:///home/azif/projetcs/Ackerman_ws/ackerman_description/meshes/fw-max-luntai.STL" scale="1 1 1"/></geometry>
+        <visual><geometry><mesh filename="file://$(find ackerman_description)/meshes/fw-max-luntai.STL" scale="1 1 1"/></geometry>
             <origin xyz="0.135 0.055 0.135" rpy="0 3.14 1.57" />
             <material name="black"><color rgba="0.0 0.0 0.0 1.0" /></material>
         </visual>
@@ -128,7 +128,7 @@
     </transmission>
 
     <link name="right_front_wheel">
-        <visual><geometry><mesh filename="file:///home/azif/projetcs/Ackerman_ws/ackerman_description/meshes/fw-max-luntai.STL" scale="1 1 1"/></geometry>
+        <visual><geometry><mesh filename="file://$(find ackerman_description)/meshes/fw-max-luntai.STL" scale="1 1 1"/></geometry>
             <origin xyz="0.135 -0.055 -0.135" rpy="0 0 1.57" />
             <material name="black"><color rgba="0.0 0.0 0.0 1.0" /></material>
         </visual>
@@ -186,7 +186,7 @@
     </transmission>
 
     <link name="left_rear_wheel">
-        <visual><geometry><mesh filename="file:///home/azif/projetcs/Ackerman_ws/ackerman_description/meshes/fw-max-luntai.STL" scale="1 1 1"/></geometry>
+        <visual><geometry><mesh filename="file://$(find ackerman_description)/meshes/fw-max-luntai.STL" scale="1 1 1"/></geometry>
             <origin xyz="0.135 0.055 0.135" rpy="0 3.14 1.57" />
             <material name="black"><color rgba="0.0 0.0 0.0 1.0" /></material>
         </visual>
@@ -246,7 +246,7 @@
 
 
     <link name="right_rear_wheel">
-        <visual><geometry><mesh filename="file:///home/azif/projetcs/Ackerman_ws/ackerman_description/meshes/fw-max-luntai.STL" scale="1 1 1"/></geometry>
+        <visual><geometry><mesh filename="file://$(find ackerman_description)/meshes/fw-max-luntai.STL" scale="1 1 1"/></geometry>
             <origin xyz="0.135 -0.055 -0.135" rpy="0 0 1.57" />
             <material name="black"><color rgba="0.0 0.0 0.0 1.0" /></material>
         </visual>

@@ -1,0 +1,44 @@
+[0.011s] Invoking command in '/home/azif/projetcs/outdoor_world/src/fw_max_cartographer/build/fw_max_cartographer': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /home/azif/projetcs/outdoor_world/src/fw_max_cartographer -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/azif/projetcs/outdoor_world/src/fw_max_cartographer/install/fw_max_cartographer
+[0.117s] -- The C compiler identification is GNU 11.4.0
+[0.209s] -- The CXX compiler identification is GNU 11.4.0
+[0.221s] -- Detecting C compiler ABI info
+[0.299s] -- Detecting C compiler ABI info - done
+[0.304s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.304s] -- Detecting C compile features
+[0.305s] -- Detecting C compile features - done
+[0.308s] -- Detecting CXX compiler ABI info
+[0.389s] -- Detecting CXX compiler ABI info - done
+[0.394s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.395s] -- Detecting CXX compile features
+[0.395s] -- Detecting CXX compile features - done
+[0.402s] -- Found ament_cmake: 1.3.12 (/opt/ros/humble/share/ament_cmake/cmake)
+[0.541s] -- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter 
+[0.594s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[0.649s] -- Found cartographer_ros: 2.0.9002 (/opt/ros/humble/share/cartographer_ros/cmake)
+[0.698s] -- Found rosidl_generator_c: 3.1.7 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+[0.705s] -- Found rosidl_adapter: 3.1.7 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[0.716s] -- Found rosidl_generator_cpp: 3.1.7 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+[0.735s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.753s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.973s] -- Found Boost: /usr/lib/x86_64-linux-gnu/cmake/Boost-1.74.0/BoostConfig.cmake (found version "1.74.0") found components: iostreams 
+[1.109s] -- Found rmw_implementation_cmake: 6.1.2 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)
+[1.113s] -- Found rmw_cyclonedds_cpp: 1.3.4 (/opt/ros/humble/share/rmw_cyclonedds_cpp/cmake)
+[1.138s] -- Using RMW implementation 'rmw_cyclonedds_cpp' as default
+[1.149s] -- Found Threads: TRUE  
+[1.252s] -- Checking for module 'eigen3'
+[1.267s] --   Found eigen3, version 3.4.0
+[1.305s] -- Found Eigen: /usr/include/eigen3 (Required is at least version "3.1") 
+[1.305s] -- Eigen found (include: /usr/include/eigen3, version: 3.4.0)
+[1.343s] -- Checking for module 'flann'
+[1.359s] --   Found flann, version 1.9.1
+[1.409s] -- Found FLANN: /usr/lib/x86_64-linux-gnu/libflann_cpp.so  
+[1.410s] -- FLANN found (include: /usr/include, lib: /usr/lib/x86_64-linux-gnu/libflann_cpp.so)
+[2.418s] -- Checking for module 'libusb-1.0'
+[2.436s] --   Found libusb-1.0, version 1.0.25
+[2.480s] -- Found libusb: /usr/lib/x86_64-linux-gnu/libusb-1.0.so  
+[2.481s] -- OpenNI found (version: 1.5.4.0, include: /usr/include/ni, lib: /usr/lib/libOpenNI.so;libusb::libusb)
+[2.554s] -- OpenNI2 found (version: 2.2.0.33, include: /usr/include/openni2, lib: /usr/lib/x86_64-linux-gnu/libOpenNI2.so;libusb::libusb)
+[2.684s] -- Eigen found (include: /usr/include/eigen3, version: 3.4.0)
+[2.691s] -- OpenNI found (version: 1.5.4.0, include: /usr/include/ni, lib: /usr/lib/libOpenNI.so;libusb::libusb)
+[2.698s] -- OpenNI2 found (version: 2.2.0.33, include: /usr/include/openni2, lib: /usr/lib/x86_64-linux-gnu/libOpenNI2.so;libusb::libusb)
+[2.794s] Invoked command in '/home/azif/projetcs/outdoor_world/src/fw_max_cartographer/build/fw_max_cartographer' returned '-2': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /home/azif/projetcs/outdoor_world/src/fw_max_cartographer -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/azif/projetcs/outdoor_world/src/fw_max_cartographer/install/fw_max_cartographer

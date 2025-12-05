@@ -6,7 +6,8 @@ from launch.event_handlers import OnProcessExit
 from launch.substitutions import LaunchConfiguration, Command, PathJoinSubstitution
 from launch.launch_description_sources import PythonLaunchDescriptionSource
 from launch_ros.actions import Node
-from launch_ros.parameter_descriptions import ParameterValue 
+from launch_ros.parameter_descriptions import ParameterValue
+
 
 def generate_launch_description():
     # --- 1. CONFIGURATION & PATHS ---
@@ -16,17 +17,23 @@ def generate_launch_description():
 
     # Path to your XACRO file
     urdf_file_path = os.path.join(pkg_ackerman_description, 'urdf', 'fw-max.xacro')
+
     # Path to your controller configuration YAML
     controller_config_path = os.path.join(pkg_ackerman_description, 'config', 'fw_max_controllers.yaml')
 
+    # Path to your custom Gazebo world
+    custom_world_path = '/home/azif/projetcs/fw-max-ackerman/ackerman_description/world/no_roof_small_warehouse.world'
+
+    # Launch configurations
     use_sim_time = LaunchConfiguration('use_sim_time', default='true')
-    world_arg = LaunchConfiguration('world', default='') 
+    world_arg = LaunchConfiguration('world', default=custom_world_path)
 
     # --- 2. ROBOT DESCRIPTION & STATE PUBLISHER ---
 
-    # Process the XACRO file to get the URDF content
+    # Convert XACRO to URDF
     robot_description_content = ParameterValue(
-        Command(['xacro ', urdf_file_path]), value_type=str
+        Command(['xacro ', urdf_file_path]),
+        value_type=str
     )
 
     robot_state_publisher_node = Node(
@@ -38,7 +45,7 @@ def generate_launch_description():
         }],
         output='screen'
     )
-    
+
     # --- 3. GAZEBO LAUNCH ---
 
     gazebo = IncludeLaunchDescription(
@@ -54,36 +61,37 @@ def generate_launch_description():
     # --- 4. GAZEBO SPAWN ENTITY ---
 
     spawn_entity = Node(
-        package='gazebo_ros', 
+        package='gazebo_ros',
         executable='spawn_entity.py',
-        arguments=['-topic', 'robot_description',
-                   '-entity', 'fw_max',
-                   '-x', '0.0',
-                   '-y', '0.0',
-                   '-z', '0.5'], 
+        arguments=[
+            '-topic', 'robot_description',
+            '-entity', 'fw_max',
+            '-x', '0.0',
+            '-y', '0.0',
+            '-z', '0.5'
+        ],
         output='screen'
     )
 
-    # --- 5. CONTROLLER SPAWNERS (Load Config and Spawn) ---
+    # --- 5. CONTROLLER SPAWNERS ---
 
-    # 🔑 CRITICAL FIX: The spawner executable is used to load the configuration
-    # This also acts as a spawner for the controller manager in simulation
+    # Controller manager (ros2_control)
     controller_manager_node = Node(
         package='controller_manager',
         executable='ros2_control_node',
-        parameters=[controller_config_path], # Load the YAML config
+        parameters=[controller_config_path],
         output='screen',
     )
-    
-    # 🔑 NEW: A spawner to launch the Joint State Broadcaster after the robot is spawned
+
+    # Joint State Broadcaster
     joint_state_broadcaster_spawner = Node(
         package='controller_manager',
         executable='spawner',
         arguments=['joint_state_broadcaster', '-c', '/controller_manager'],
         output='screen',
     )
-    
-    # Spawner for the velocity controller
+
+    # Wheel velocity controller
     wheel_velocity_controller_spawner = Node(
         package='controller_manager',
         executable='spawner',
@@ -91,7 +99,7 @@ def generate_launch_description():
         output='screen',
     )
 
-    # Spawner for the steering controller
+    # Steering controller
     steering_position_controller_spawner = Node(
         package='controller_manager',
         executable='spawner',
@@ -99,10 +107,9 @@ def generate_launch_description():
         output='screen',
     )
 
-
     # --- 6. EVENT HANDLERS (Sequential Spawning) ---
 
-    # 1. Wait for robot to be spawned before loading controllers
+    # Wait for robot to spawn → then load JSB
     load_jsb = RegisterEventHandler(
         event_handler=OnProcessExit(
             target_action=spawn_entity,
@@ -110,7 +117,7 @@ def generate_launch_description():
         )
     )
 
-    # 2. Wait for the JSB to load before loading the main robot controllers
+    # Wait for JSB → then load main controllers
     load_main_controllers = RegisterEventHandler(
         event_handler=OnProcessExit(
             target_action=joint_state_broadcaster_spawner,
@@ -123,16 +130,22 @@ def generate_launch_description():
     return LaunchDescription([
         # Launch Arguments
         DeclareLaunchArgument(
-            'use_sim_time', default_value='true', description='Use simulation (Gazebo) clock if true'),
+            'use_sim_time',
+            default_value='true',
+            description='Use simulation (Gazebo) clock if true'
+        ),
         DeclareLaunchArgument(
-            'world', default_value='', description='Load default empty Gazebo world.'), 
-   
-        # Main Nodes
+            'world',
+            default_value=custom_world_path,
+            description='Path to the Gazebo world file to load'
+        ),
+
+        # Main Components
         gazebo,
         robot_state_publisher_node,
         spawn_entity,
 
-        # Controller Spawning (Sequential)
+        # Controller Spawning
         load_jsb,
-        load_main_controllers, 
+        load_main_controllers,
     ])
